@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Prova</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="inicial_bt_doacao">Doações</string>
+    <string name="inicial_bt_maus_tratos">Maus Tratos</string>
+
+
+    <string name="title_activity_cadastrar_maus_tratos">Cadastrar Maus Tratos</string>
+    <string name="maus_tratos_desc_animal">Descrição do Animal</string>
+    <string name="maus_tratos_imagens">Imagens do animal</string>
+    <string name="maus_tratos_cidade">Cidade onde se encontra o animal</string>
+    <string name="maus_tratos_altitude">Altitude *</string>
+    <string name="maus_tratos_longitude">Longitude *</string>
+
+    <string name="maus_tratos_informacao">Informações de Contato</string>
+    <string name="nome_contato">Nome para Contato *</string>
+    <string name="cpf">CPF</string>
+    <string name="telefone_contato">Telefone *</string>
+    <string name="endereco_contato">Endereço *</string>
+    <string name="numero_casa_contato">Nº</string>
+
+
+    <string name="nome_animal">Nome do Animal *</string>
+    <string name="desc_animal">Descrição do Animal *</string>
+    <string name="especie">Espécie</string>
+    <string name="sexo">Sexo</string>
+    <string name="porte">Porte</string>
+    <string name="peso">Peso</string>
+    <string name="idade">Idade</string>
+    <string name="pelagem">Pelagem</string>
+    <string name="raca">Raça</string>
+    <string name="castrado">Castrado</string>
+
+
+    <string name="bt_salvar">Salvar</string>
+    <string name="bt_cancelar">Cancelar</string>
+    <string name="campos_obrigatorios">* Campos Obrigatórios</string>
+
+    <string name="title_activity_lista_maus_tratos">ListaMausTratos</string>
+
+    <string name="title_activity_cadastrar_adocao">CadastrarAdocao</string>
+    <string name="title_activity_lista_adocao">ListaAdocao</string>
+
+
+</resources>

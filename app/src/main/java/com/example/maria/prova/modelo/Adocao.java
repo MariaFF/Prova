@@ -20,16 +20,16 @@ public class Adocao extends SugarRecord {
     private String peso;
     private String pelagem;
     private String raca;
-    private Boolean sexo;
-    private Boolean castrado;
-    private Double idade;
+    private String sexo;
+    private String castrado;
+    private Integer idade;
 
     public Adocao() {
     }
 
     public Adocao(String nomeAnunciante, String cpf, String telefone, String endereco, String numCasa,
                   String nomeAnimal, String descricaoAnimal, String especie, String porte, String peso,
-                  String pelagem, String raca, Boolean sexo, Boolean castrado, Double idade) {
+                  String pelagem, String raca, String sexo, String castrado, Integer idade) {
         this.nomeAnunciante = nomeAnunciante;
         this.cpf = cpf;
         this.telefone = telefone;
@@ -143,27 +143,27 @@ public class Adocao extends SugarRecord {
         this.raca = raca;
     }
 
-    public Boolean getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(Boolean sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
-    public Boolean getCastrado() {
+    public String getCastrado() {
         return castrado;
     }
 
-    public void setCastrado(Boolean castrado) {
+    public void setCastrado(String castrado) {
         this.castrado = castrado;
     }
 
-    public Double getIdade() {
+    public Integer getIdade() {
         return idade;
     }
 
-    public void setIdade(Double idade) {
+    public void setIdade(Integer idade) {
         this.idade = idade;
     }
 }

@@ -20,7 +20,7 @@
         <!-- VERSÃO -->
         <meta-data
             android:name="VERSION"
-            android:value="1" />
+            android:value="3" />
         <!-- mostra um log das consultas realizadas -->
         <meta-data
             android:name="QUERY_LOG"

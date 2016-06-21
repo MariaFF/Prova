@@ -104,24 +104,10 @@
             android:text="@string/sexo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RadioButton
-        android:id="@+id/rb_femea"
-        android:text="Femea"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content" />
-
-        <RadioButton
-        android:id="@+id/rb_macho"
-        android:text="Macho"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content" />
-
-    </LinearLayout>
+        <EditText
+            android:id="@+id/sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -176,24 +162,10 @@
             android:text="@string/castrado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/castrado_sim"
-            android:text="Sim"
-            android:layout_width="80dp"
+        <EditText
+            android:id="@+id/castrado"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <RadioButton
-            android:id="@+id/castrado_nao"
-            android:text="Não"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

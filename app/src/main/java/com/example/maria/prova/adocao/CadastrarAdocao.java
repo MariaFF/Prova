@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.example.maria.prova.MainActivity;
 import com.example.maria.prova.R;
@@ -99,25 +100,29 @@ public class CadastrarAdocao extends AppCompatActivity {
                         adocao.setRaca(ed_raca.getText().toString());
                         adocao.setSexo(ed_sexo.getText().toString());
                         adocao.setCastrado(ed_castrado.getText().toString());
-                        adocao.setIdade(Integer.valueOf(ed_idade.getText().toString()));
+                        adocao.setIdade(ed_idade.getText().toString());
                         adocao.save();
                         passarDadosWebServiceAdocao(
-                                ed_nomeAnunciante.getText().toString(),
-                                ed_cpf.getText().toString(),
-                                ed_telefone.getText().toString(),
-                                ed_endereco.getText().toString(),
-                                ed_numCasa.getText().toString(),
-                                ed_nomeAnimal.getText().toString(),
-                                ed_descAnimal.getText().toString(),
-                                ed_especie.getText().toString(),
-                                ed_porte.getText().toString(),
-                                ed_peso.getText().toString(),
-                                ed_pelagem.getText().toString(),
-                                ed_raca.getText().toString(),
-                                ed_sexo.getText().toString(),
-                                ed_castrado.getText().toString(),
-                                Integer.valueOf(ed_idade.getText().toString()));
+                                adocao.getNomeAnunciante(),
+                                adocao.getCpf(),
+                                adocao.getTelefone(),
+                                adocao.getEndereco(),
+                                adocao.getNumCasa(),
+                                adocao.getNomeAnimal(),
+                                adocao.getDescricaoAnimal(),
+                                adocao.getEspecie(),
+                                adocao.getPorte(),
+                                adocao.getPeso(),
+                                adocao.getPelagem(),
+                                adocao.getRaca(),
+                                adocao.getSexo(),
+                                adocao.getCastrado(),
+                                adocao.getIdade());
 
+                        Toast.makeText(this, "Salvo com sucesso", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), ListaAdocao.class);
+                        startActivity(intent);
+                        finish();
 
                     } else {
                         ed_descAnimal.requestFocus();
@@ -151,7 +156,7 @@ public class CadastrarAdocao extends AppCompatActivity {
                         adocao.setRaca(ed_raca.getText().toString());
                         adocao.setSexo(ed_sexo.getText().toString());
                         adocao.setCastrado(ed_castrado.getText().toString());
-                        adocao.setIdade(Integer.valueOf(ed_idade.getText().toString()));
+                        adocao.setIdade(ed_idade.getText().toString());
                         adocao.save();
                         passarDadosWebServiceAdocao(
                                 ed_nomeAnunciante.getText().toString(),
@@ -168,8 +173,12 @@ public class CadastrarAdocao extends AppCompatActivity {
                                 ed_raca.getText().toString(),
                                 ed_sexo.getText().toString(),
                                 ed_castrado.getText().toString(),
-                                Integer.valueOf(ed_idade.getText().toString()));
+                                ed_idade.getText().toString());
 
+                        Toast.makeText(this, "Salvo com sucesso", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), ListaAdocao.class);
+                        startActivity(intent);
+                        finish();
 
                     } else {
                         ed_descAnimal.requestFocus();
@@ -211,13 +220,13 @@ public class CadastrarAdocao extends AppCompatActivity {
             String raca,
             String sexo,
             String castrado,
-            Integer idade
+            String idade
 
     ) {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 //endereço ip
-        String myurl = "http://192.168.56.1:8080/ServicoWeb/resource/WebService/salvarAdocao";
+        String myurl = "http://172.17.254.254:8080/ServicoWeb/resource/WebService/salvarAdocao";
         String POST_PARAMS = "nomeAnunciante=" + nomeAnunciante +
                 "&cpf=" + cpf +
                 "&telefone=" + telefone +

@@ -72,14 +72,14 @@ public class CadastrarMausTratos extends AppCompatActivity {
                     mausTratos.save();
 
                     passarDadosWebServiceMausTratos(
-                            ed_nomeContato.getText().toString(),
-                            ed_telefone.getText().toString(),
 
-                            ed_descAnimal.getText().toString(),
-                            ed_cidadeAnimal.getText().toString(),
-                            ed_longitude.getText().toString(),
-                            ed_altitude.getText().toString()
-                    );
+                            mausTratos.getNome(),
+                            mausTratos.getTelefone(),
+                            mausTratos.getDescricaoAnimal(),
+                            mausTratos.getCidadeAnimal(),
+                            mausTratos.getLongitude(),
+                            mausTratos.getAltitude());
+
 
                     Toast.makeText(this, "Salvo com sucesso", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), ListaMausTratos.class);
@@ -110,14 +110,12 @@ public class CadastrarMausTratos extends AppCompatActivity {
                     mausTratos.save();
 
                     passarDadosWebServiceMausTratos(
-                            ed_nomeContato.getText().toString(),
-                            ed_telefone.getText().toString(),
-
-                            ed_descAnimal.getText().toString(),
-                            ed_cidadeAnimal.getText().toString(),
-                            ed_longitude.getText().toString(),
-                            ed_altitude.getText().toString()
-                    );
+                            mausTratos.getNome(),
+                            mausTratos.getTelefone(),
+                            mausTratos.getDescricaoAnimal(),
+                            mausTratos.getCidadeAnimal(),
+                            mausTratos.getLongitude(),
+                            mausTratos.getAltitude());
 
                     Toast.makeText(this, "Alterado com sucesso", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), ListaMausTratos.class);
@@ -156,9 +154,9 @@ public class CadastrarMausTratos extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 //endereço ip
-        String myurl = "http://192.168.56.1:8080/ServicoWeb/resource/WebService/salvarAdocao";
+        String myurl = "http://172.17.254.254:8080/ServicoWeb/resource/WebService/salvarMausTratos";
         String POST_PARAMS =
-                "nome=" + nome+
+                "nome=" + nome +
                 "&telefone=" + telefone +
 
                 "&descricao=" + descricaoAnimal +

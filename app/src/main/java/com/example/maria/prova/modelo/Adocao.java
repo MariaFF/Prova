@@ -22,14 +22,14 @@ public class Adocao extends SugarRecord {
     private String raca;
     private String sexo;
     private String castrado;
-    private Integer idade;
+    private String idade;
 
     public Adocao() {
     }
 
     public Adocao(String nomeAnunciante, String cpf, String telefone, String endereco, String numCasa,
                   String nomeAnimal, String descricaoAnimal, String especie, String porte, String peso,
-                  String pelagem, String raca, String sexo, String castrado, Integer idade) {
+                  String pelagem, String raca, String sexo, String castrado, String idade) {
         this.nomeAnunciante = nomeAnunciante;
         this.cpf = cpf;
         this.telefone = telefone;
@@ -159,11 +159,11 @@ public class Adocao extends SugarRecord {
         this.castrado = castrado;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 }
